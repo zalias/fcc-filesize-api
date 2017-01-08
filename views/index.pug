@@ -1,4 +1,19 @@
-p Submit a file
-  form(action="/upload-file" method="post" enctype="multipart/form-data")
-    input(type="file" name="someFile")
-    input(type="submit")
+html
+  head
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    script(src='/js/jquery-3.1.1.min.js')
+    script(src='/js/bootstrap.min.js')
+  body
+    .main.container
+      .row
+        h1.text-center FCC File Metadata MicroService
+      br
+      br
+      .row
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title Submit a file
+          .panel-body
+            form(action="/upload-file" method="post" enctype="multipart/form-data")
+              input.btn-block.btn-primary(type="file" name="someFile")
+              input.btn.btn-block.btn-primary(type="submit")
